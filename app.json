@@ -1,0 +1,31 @@
+{
+  "name": "app.json",
+  "scripts": {
+    "postdeploy": "bin/setup",
+    "pr-predestroy": "bin/teardown"
+  },
+  "env": {
+    "BT_ENVIRONMENT": {
+      "required": true
+    },
+    "BT_MERCHANT_ID": {
+      "required": true
+    },
+    "BT_PRIVATE_KEY": {
+      "required": true
+    },
+    "BT_PUBLIC_KEY": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/sayemshikder/stripe-connect-rocketrides"
+    }
+  ]
+}
